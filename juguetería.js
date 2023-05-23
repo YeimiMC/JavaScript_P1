@@ -1,19 +1,30 @@
 console.log("::::: Ejercicio 2 :::::")
 
-//Número de items
-numeroDePayasos = 27;
-numeroDeMuñecas = 14;
+//número de items
+var payasos=prompt("Ingresa la cantidad de payasos");
+var muñecas=prompt("Ingresa la cantidad de muñecas");
 
-//Peso de los items (gr)
-pesoDePayaso = 112;
-pesoDeMuñeca = 75;
+//payasos = 27;
+//muñecas = 14;
 
-//Totalizar el peso por payasos y muñecas
-pesoTotalPayasos = numeroDePayasos * pesoDePayaso;
-pesoTotalMuñecas = numeroDeMuñecas * pesoDeMuñeca;
+//peso de items
+const pesoPayaso = 112;
+const pesoMuñeca = 75;
 
-//Obtener el peso del paquete
-pesoTotalDelPaquete = pesoTotalPayasos + pesoTotalMuñecas;
+//operaciones
 
-//Imprimir resultado
-console.log("El peso total del paquete es:", pesoTotalDelPaquete, "gramos")
+pesoPayasoTotal = payasos*pesoPayaso;
+pesoMuñecaTotal = muñecas*pesoMuñeca;
+
+/*
+pesoTotal = pesoPayasoTotal+pesoMuñecaTotal;
+*/
+
+function pesoTotal (pesoPayasoTotal,pesoMuñecaTotal){
+    operacion = pesoPayasoTotal+pesoMuñecaTotal;
+    return operacion;
+}
+
+//print
+const resultado = pesoTotal(pesoPayasoTotal, pesoMuñecaTotal);
+console.log("El peso total del paquete es " + resultado + " gramos");
