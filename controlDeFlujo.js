@@ -47,6 +47,8 @@ if(condicion){
 
 */
 
+/*
+
 let edadAxel = prompt("Ingresa tu edad");
 let edadParaEntrarALaFiesta = 18;
 
@@ -59,9 +61,42 @@ if (edadAxel < edadParaEntrarALaFiesta){ //verdadero
     console.log ("Felicidades, tienes la edad permitida para enrar a la fiesta");
     permitirCompra();
 }
+*/
 
 /* Test de nuestro programa (valores que también se evaluan como falsos)
     - "false" (String)
     -  Nan
     - fals (boolean dispara verdadero)
 */
+
+/*
+Else if (además si / si no entonces)
+Esta condicional nos ayuda a ejectuar una nueva condición en caso de que la primera sea falsa. Podemos usar todas las estructuras  else if que sean necesarios, terminando con una estructura else.
+
+Estructura básicaa del else if
+
+if(condición 1){
+    //aquí ejecuto mi bloque de código que se ejecuta si la condición 1 es verdadera
+} else if(condición 2){
+    //bloque de código que se ejecuta si la condición 1 es falsa y la condición 2 es verdadera
+} else if(condición 3){
+    //bloque de código que se ejecuta si la condición 1 es falsa y la condición 2 también es falsa, entonces la condición 3 es verdadera
+} else {
+    //bloque de código que se ejecuta si la condición 1, 2 y 3 son falsas
+}
+
+Se puede anidar x cantidad de else if entre el id que evalua la condición inicial y el else que termina toda la expresión.
+
+*/
+
+let hora = prompt("Ingrese la hora actual")
+if(hora < 12){
+    console.log("Buenos días");
+} else if (hora <= 19){
+    console.log("Buenas tardes ya, qué barbaro, cómo pasa el tiempo");
+} else{
+    console.log("Buenas noches, vamos a dormir");
+}
+
+
+
