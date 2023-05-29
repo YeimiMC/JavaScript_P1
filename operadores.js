@@ -144,6 +144,7 @@ Como la primera comparación && no es igual a false, pero como una de las segund
     -- (decremento): decrementa un valor de uno en uno
 */
 
+/*
 let varlor1 = 55;
 let valor2 = 17;
 
@@ -157,3 +158,80 @@ console.log("Incremento: " , ++varlor1);
 console.log("Incremento: " , --valor2);
 
 console.log(varlor1); //porque ya se incrementó 1
+*/
+
+/* Switch:
+Esta condicional nos permite hacer múltiples operaciones y tomar decisiones en función de distintos estados de las variables.
+Evalúa una expresión comparando el valor de un dato o varaible, y ejecutando la instrucción asociado a ese caso.
+
+- case: Evalúa el caso o condición asociado que dispara un bloque de codigo.
+-break: Termina el proceso sin que tengamos que pasar por todas las iteraciones o casos.
+- default: Termina el proceso en caso de que ninguna de las evaluaciones sea la correcta (similar al else)
+
+switch(expresión o condición){
+    case valor1:
+        //código que se ejecuta si la condición es igual a valor1
+    break;
+
+    case valor2:
+         //código que se ejecuta si la condición es igual a valor2
+    break;
+
+    case valor3:
+         //código que se ejecuta si la condición es igual a valor3
+    break;
+
+    case valor4:
+         //código que se ejecuta si la condición es igual a valor4
+    break;
+
+    case valor5:
+         //código que se ejecuta si la condición es igual a valor5
+    break;
+
+    default:
+        //Ingresaste un piso incorrecto
+}
+*/
+
+//Ejemplo de switch
+
+let pisoDestino = prompt("Ingresa el piso al que quieras ir (1 al 5)");
+
+switch(pisoDestino) {
+    //Para jugar con nuestros casos elñ tipo de dato debe coindicir para que se ejecute correctamente
+    case "1":
+        console.log("Vamos a piso 1 (suena música de elevador de fondo)");
+        break;
+    
+    case "2":
+        console.log("Vamos a piso 2 (suena música de elevador de fondo)");
+        break;
+    
+    case "3":
+        console.log("Vamos a piso 3 (suena música de elevador de fondo)");
+        break;
+    case "4":
+        console.log("Vamos a piso 4 (suena música de elevador de fondo)");
+        break;
+    
+    case "5":
+        console.log("Vamos a piso 5 (suena música de elevador de fondo)");
+        break;
+
+    default:
+        console.log("Ingresaste un piso que no es válido");
+}
+
+//Ejercicio de Evee
+var elementoEvolucion = prompt("Ingresa el elemento con el que evolucionarás a tu pokemon");
+
+switch(elementoEvolucion){
+    case "piedraFuego":
+        console.log("Tu Evee ha evolucionado a Flareon");
+        break;
+
+    case "piedraTrueno":
+        console.log("Tu Evee ha evolucionado a Jolteaon")
+        break;
+}
