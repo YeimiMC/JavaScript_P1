@@ -118,7 +118,46 @@ console.log(listaDeComprasDeLaQuincena.indexOf("pistaches"));
 console.log(listaDeComprasDeLaQuincena.join('\n'))
 console.log(listaDeComprasDeLaQuincena.join(' \n*** '))
 
-//Ver métodos reverse, sort, toStrig, splice
+//Modificaciones del arreglo (push, pop, shift, unshift, splice)
+
+//Acceso y búsqueda de elementos (indexOf, lastIndexOf, includes)
+
+//Transformación de elementos (sort, reverse, map, forEach)
+
+//Operaciones lógicas (every, some)
+
+//Creación de nuevos arreglos (slice, concat, join, reverse)
+
+/*
+Splice (agregar, eliminar o reemplazar elementos en posiciones específicas)
+
+Sintaxis del splice
+
+array.splice(iniciamos, numeroElementosABorrar, ElementoAInsertar, ElementoAInsertar);
+*/
+
+//Splice para borrar elementos
+var abedecario = ["A", "B", "C", "D", "E"]; //borrar C y D
+
+abedecario.splice(2,2);
+
+console.log(abedecario);
+
+//splice para insertar elementos
+abedecario.splice(2,0, "C", "D")
+
+console.log(abedecario); //A B C D E
+
+//Splice para reemplazar elementos del arreglo
+var vocales = ["A", "E", "I", "O","U"]//Reemplazar la E I
+
+vocales.splice(4, 0, "COMER", "COMER", "COMER"); 
+
+console.log(vocales);
+/*
+
+/*
+//Ver métodos splice, reverse, sort, toStrig
 
 //Método para modificar un array (eliminando, reemplazando y agregando elementos)
 console.log(listaDeComprasDeLaQuincena.splice(3, 1)); //Aquí borró un elemento a partir del elemento 3 que fue Mazapán
@@ -140,3 +179,4 @@ console.log(listaDeComprasDeLaQuincena.sort()); //aparecen diferentes porque son
 
 //Método para convertir en cadena de texto lo que está dentro del array 
 console.log(listaDeComprasDeLaQuincena.toString());
+*/
