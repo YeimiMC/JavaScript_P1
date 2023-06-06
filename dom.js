@@ -41,12 +41,19 @@ console.log(parrafo);
 
 //Traer elementos con getElementsByClassName
 var parrafitos = document.getElementsByClassName("parrafos");
-parrafitos.style.color = "red";
+//parrafitos.style.color = "red";
 
 console.log(parrafitos); //Info HTML Collection
 
 var parrafosEtiqueta = document.getElementsByTagName("p");
-console.log(parrafosEtiqueta);
+//console.log(parrafosEtiqueta);
+
+//Métodos más actuales
+var parrafoQuerySelector = document.querySelector("parrafo1");
+var parrafoQuerySelectorAll = document.querySelectorAll(".parrafos");
+
+
+console.log(parrafoQuerySelectorAll); //Te trae la lista de nodos con la característica que seleccionaste.
 
 //Buscar querySelector del DOM 
 
@@ -64,4 +71,62 @@ NOTA: El método querySelectir devuelve el primer elemento que coincide con el s
 
 Cuando se desea seleccionar múltiples elementos que coinciden con un selectir, podemos usar el método querySelectorAll  el cual devolverá una lista (NodeList) de todos los elementos que coinciden con el selector dado.
 
+*/ 
+/* Eventos (acción y reacción)
+
+Los eventos son una forma mucho más facil de modificar o alterar el contenido de un elemento.  Los eventos son acciones que se pueden realizar sobre un elemento u objeto y se usan para modificar atributos, estilos, textos o para invocar funciones de JS
+
 */
+
+//Evento HTML
+//Creo una función llamada cambiaColor donde yo paso a un color como parámetro (red, blue, black)
+function cambiaColor(color){
+
+    //Con ese color que paso como parámetro, se lo aplico a un elemento en específico.
+    parrafo1.style.color = color;
+
+}
+
+/*Evento con EventListener
+Permite escuchar al evento indicado (primero parámetro) y en el caso de que ocurra (escuche), se ejecuta la función asociada (segundo parámetro)
+
+Sintaxis
+
+object.addEventListener(nombreDelEvento, funcionQueSeDispara)
+
+*/
+
+//Referecias boton
+/*const botonCambiarColor = document.querySelector("#botonCambiarColor");
+botonCambiarColor.addEventListener("click", function(){
+
+    alert("Hola, has presionado el botón para cambiar color");
+
+})
+*/
+
+
+/* Elementos para crear y agregar elementos
+1 Se creaan
+2 Se agregan
+
+Sintaxis para crear elementos
+elementoPadre.createElement("tipoDeElemento")
+
+*/
+
+//Para crear elementos creaeElement()
+const div = document.createElement("div");
+
+//Para insertarlo appendChild
+document.body.appendChild(div);
+
+//Código para agregar una imagen a mi documento
+
+//1. Creo la imagen
+var appendImg = document.createElement("img");
+appendImg.src = "https://cdn.pixabay.com/photo/2016/03/28/12/35/cat-1285634_1280.png";
+appendImg.alt = "Imagen Sorpresa";
+
+//2. Insertar
+document.body.appendChild(appendImg);
