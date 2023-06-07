@@ -4,9 +4,8 @@ console.log("Mini sistema contable")
 
 Crear 5 instancias
 Parametos(nombre, edad, RFC, número de días trabajados)
-sueldo por día = $156.78
 ISR del 31%
-Trabajan a la semana 7 días, 8 horas por día
+sueldo por día = $156.78Trabajan a la semana 7 días, 8 horas por día
 
 Métodos:
 imprimir lo siguiente
@@ -18,14 +17,14 @@ sueldo por día bruto y neto -
 */ 
 
 //1.- Propiedades
-class trabajador{
+class Trabajador{
     nombre = "";
     edad = 0;
     RFC = "";
     díasTrabajados = 0;
     sueldoPorDia = 156.78;
     diasSemana = 7;
-    horasPordia = 8;
+    horasPorDia = 8;
     porcentajeISR = 0.31; //al ser porcentaje
 
     //2. Constructor
@@ -68,67 +67,81 @@ class trabajador{
         return sueldoNetoQuincena;
     }
     sueldoBrutoDia(){
-        const sueldoBrutoDia = this.sueldoPorDia * this.horasPorDia
+        const sueldoBrutoDia = this.sueldoPorDia;
         return sueldoBrutoDia
     }
 
     sueldoNetoDia(){
-        const sueldoBrutoDia = this.sueldoPorDia * this.diasTrabajados;
-        const isr = sueldoBrutoDia * this.porcentajeISR;
-        const sueldoNetoDia = sueldoBrutoDia - isr;
-        return this.sueldoNetoDia
+        const sueldoBrutoDia = this.sueldoPorDia;
+        const isr = this.sueldoPorDia * this.porcentajeISR;
+        const sueldoNetoDia = this.sueldoPorDia - isr;return sueldoNetoDia;
+        return sueldoNetoDia;
     }
-    
+     //Aquí había un error porque estaba usando this.sueldoNetoDia por lo que la variable no existía para hacer el return
 
 }
 
 //Instanciamos 
-let trabajador1 = new trabajador("Sabino", 23, "MACS000305", 1);
-let trabajador2 = new trabajador("Alejo", 33, "LOZA900125", 27);
-let trabajador3 = new trabajador("Óscar", 27, "CASO850731", 20);
-let trabajador4 = new trabajador("Macarena", 26, "GOFM960207", 30);
-let trabajador5 = new trabajador("Julia", 19, "HEMJ040817", 15);
+let trabajador1 = new Trabajador("Sabino", 23, "MACS000305", 1);
+let trabajador2 = new Trabajador("Alejo", 33, "LOZA900125", 27);
+let trabajador3 = new Trabajador("Óscar", 27, "CASO850731", 20);
+let trabajador4 = new Trabajador("Macarena", 26, "GOFM960207", 30);
+let trabajador5 = new Trabajador("Julia", 19, "HEMJ040817", 15);
 
 
-console.log("El sueldo de ", `${trabajador1.nombre}`, "es", trabajador1.sueldoBrutoMes());
+console.log("El sueldo del trabajador se desglosa de la siguiente manera. ");
+trabajador1.imprimirInfoTrabajador()
+console.log(
+"Sueldo mensual bruto:", trabajador1.sueldoBrutoMes(),
+" Sueldo mensual neto: ", trabajador1.sueldoNetoMes(),
+" Sueldo quincenal bruto:", trabajador1.sueldoBrutoQuincena(),
+" Sueldo quincenal neto: ", trabajador1.sueldoNetoQuincena(),
+" Sueldo diario bruto: ", trabajador1.sueldoBrutoDia(),
+" Sueldo neto diario: ", trabajador1.sueldoNetoDia());
 
-/*Instanciar al trabajador 1
-let sueldoBrutoMes = trabajador1.sueldoBrutoMes();
-let sueldoNetoMes = trabajador1.sueldoNetoMes();
-let sueldoBrutoQuincena = trabajador1.sueldoBrutoQuincena();
-let sueldoNetoQuincena = trabajador1.sueldoNetoQuincena();
-let sueldoBrutoDia = trabajador1.sueldoBrutoDia();
-let sueldoNetoDia = trabajador1.sueldoNetoDia();
+console.log("El sueldo del trabajador se desglosa de la siguiente manera. ");
+trabajador2.imprimirInfoTrabajador();
+console.log(
+"Sueldo mensual bruto:", trabajador2.sueldoBrutoMes(),
+" Sueldo mensual neto: ", trabajador2.sueldoNetoMes(),
+" Sueldo quincenal bruto:", trabajador2.sueldoBrutoQuincena(),
+" Sueldo quincenal neto: ", trabajador2.sueldoNetoQuincena(),
+" Sueldo diario bruto: ", trabajador2.sueldoBrutoDia(),
+" Sueldo neto diario: ", trabajador2.sueldoNetoDia());
 
-//Imprimir en consola al trabajador1
-trabajador1.imprimirInfoTrabajador();
+console.log("El sueldo del trabajador se desglosa de la siguiente manera. ");
+trabajador3.imprimirInfoTrabajador()
+console.log(
+"Sueldo mensual bruto:", trabajador3.sueldoBrutoMes(),
+" Sueldo mensual neto: ", trabajador3.sueldoNetoMes(),
+" Sueldo quincenal bruto:", trabajador3.sueldoBrutoQuincena(),
+" Sueldo quincenal neto: ", trabajador3.sueldoNetoQuincena(),
+" Sueldo diario bruto: ", trabajador3.sueldoBrutoDia(),
+" Sueldo neto diario: ", trabajador3.sueldoNetoDia());
 
-console.log("Sueldo mensual bruto : ", sueldoBrutoMes);
-console.log("Sueldo mensual neto : ", sueldoNetoMes);
-console.log("Sueldo quincenal bruto : ", sueldoBrutoQuincena);
-console.log("Sueldo quincenal neto : ", sueldoNetoQuincena);
-console.log("Sueldo diario bruto : ", sueldoBrutoDia);
-console.log("Sueldo diario neto : ", sueldoNetoDia);
+console.log("El sueldo del trabajador se desglosa de la siguiente manera. ");
+trabajador4.imprimirInfoTrabajador()
+console.log(
+"Sueldo mensual bruto:", trabajador4.sueldoBrutoMes(),
+" Sueldo mensual neto: ", trabajador4.sueldoNetoMes(),
+" Sueldo quincenal bruto:", trabajador4.sueldoBrutoQuincena(),
+" Sueldo quincenal neto: ", trabajador4.sueldoNetoQuincena(),
+" Sueldo diario bruto: ", trabajador4.sueldoBrutoDia(),
+" Sueldo neto diario: ", trabajador4.sueldoNetoDia());
+
+console.log("El sueldo del trabajador se desglosa de la siguiente manera. ");
+trabajador5.imprimirInfoTrabajador()
+console.log(
+"Sueldo mensual bruto:", trabajador5.sueldoBrutoMes(),
+" Sueldo mensual neto: ", trabajador5.sueldoNetoMes(),
+" Sueldo quincenal bruto:", trabajador5.sueldoBrutoQuincena(),
+" Sueldo quincenal neto: ", trabajador5.sueldoNetoQuincena(),
+" Sueldo diario bruto: ", trabajador5.sueldoBrutoDia(),
+" Sueldo neto diario: ", trabajador5.sueldoNetoDia());
 
 
 
-//Para el trabajador 1
-trabajador1.imprimirInfoTrabajador();
-trabajador1.sueldoBrutoMes();
-trabajador1.sueldoNetoMes();
-trabajador1.sueldoBrutoQuincena();
-trabajador1.sueldoNetoQuincena();
-trabajador1.sueldoBrutoDía();
-trabajador1.sueldoNetoDía();
-*/
 
 /*
-trabajador2.imprimirInfoTrabajador();
-
-trabajador3.imprimirInfoTrabajador();
-
-trabajador4.imprimirInfoTrabajador();
-
-trabajador5.imprimirInfoTrabajador();
+Pendiente de segunda revisión para comentarios
 */
-
