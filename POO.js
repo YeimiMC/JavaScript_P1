@@ -177,6 +177,8 @@ pancho.cuidarGato();
 julian.imprimirInfo();
 julian.cuidarGato();
 
+//________________________________
+
 /* JSON (JavaScript Object Notation)
 
 Es un formato estandar basado en texto (string) para representar datos estructurados (objetos) basados en la sintaxis de objetos de JavaScript ({, :})
@@ -208,17 +210,19 @@ JSON.stringify(objeto que quiero serializar)
 
 //console.log(JSON.stringify(objeto)); //Se muestra en el servidor como cadena de texto porque los servidores no leen objetos, es una forma de hacerlo universal.
 
+
 let objetoSerializado = (JSON.stringify(objeto));
 
-console.log("Este es un objeto serializado", objetoSerializado);
+//Podemos imprimir nuestro objeto serializado, y lo veremos como una cadena de texto
+console.log("Este es un objeto serializado: ",objetoSerializado);
 
+//Si tratamos de acceder a alguna de las propiedades de nuestro objeto serializado, no podremos ya que nos mostrara "undefined"
 console.log(objetoSerializado.nombre);
 
-//TAREA. Leer documentación de Stringify y Parse. Además, localStorage y sessionStorage
+//Para deserializar un objeto JSON, vamor a utilizar un método llamado JSON.parse(objeto que queremos deserializar)
 
-
-
-
+let objetoDeserializado = (JSON.parse(objetoSerializado));
+console.log(objetoDeserializado);
 
 
 
